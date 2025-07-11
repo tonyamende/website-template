@@ -73,7 +73,7 @@ remarkPlugins.push(figmaPlugin({
 }));
 
 const config: Config = {
-  title: 'Siemens Industrial Experience',
+  title: 'Website Template',
   tagline: 'Siemens Industrial Experience',
   favicon: 'img/favicon.png',
 

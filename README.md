@@ -1,3 +1,3 @@
 # React + TypeScript + Vite
 
-Template.
+Template: React, Typescript, Vite.

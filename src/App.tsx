@@ -6,8 +6,22 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 function App() {
+  const tableData = [
+    { id: 1, name: "John Doe", email: "john@example.com", status: "Active" },
+    { id: 2, name: "Jane Smith", email: "jane@example.com", status: "Active" },
+    { id: 3, name: "Bob Johnson", email: "bob@example.com", status: "Inactive" },
+  ];
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Navbar */}
@@ -43,6 +57,30 @@ function App() {
         <p className="mt-4 text-muted-foreground">
           This is a basic example using ShadCN components.
         </p>
+
+        {/* Table */}
+        <div className="mt-8">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>ID</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Email</TableHead>
+                <TableHead>Status</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {tableData.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell>{row.id}</TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell>{row.email}</TableCell>
+                  <TableCell>{row.status}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </main>
     </div>
   );
